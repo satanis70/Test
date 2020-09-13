@@ -2,6 +2,8 @@ package com.example.test.valute;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Map;
+
 public class Response{
 
 	@SerializedName("PreviousURL")
@@ -15,9 +17,8 @@ public class Response{
 
 	@SerializedName("PreviousDate")
 	private String previousDate;
-
 	@SerializedName("Valute")
-	private Valute valute;
+	Map<String, AllInfo> valuteinfo;
 
 	public String getPreviousURL(){
 		return previousURL;
@@ -35,7 +36,9 @@ public class Response{
 		return previousDate;
 	}
 
-	public Valute getValute(){
-		return valute;
+	public Map<String, AllInfo> getValuteInfo() {
+		return valuteinfo;
 	}
+
+
 }
